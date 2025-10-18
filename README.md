@@ -35,19 +35,7 @@ A responsive, pixel-perfect landing page for NS Auto built with **React**, featu
 
 ---
 
-## 📩 EmailJS Setup
-
-1. Create an account on [EmailJS](https://emailjs.com)
-2. Get:
-   - **Service ID**
-   - **Template ID**
-   - **Public API Key**
-3. Set these in `.env`:
-
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
 
 🧪 Local Development
