@@ -6,7 +6,7 @@ A responsive, pixel-perfect landing page for NS Auto built with **React**, featu
 
 ## 🌐 Live Demo
 
-👉 [https://taka-project.netlify.app](https://taka-project.netlify.app)
+👉 [https://nsauto.ae/](https://nsauto.ae/)
 
 ---
 
@@ -27,7 +27,7 @@ A responsive, pixel-perfect landing page for NS Auto built with **React**, featu
 ## 🛠️ Technologies Used
 
 - [React](https://reactjs.org/)
-- [EmailJS](https://www.emailjs.com/)
+- [Nodemailer](https://nodemailer.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Hook Form](https://react-hook-form.com/)
@@ -36,8 +36,6 @@ A responsive, pixel-perfect landing page for NS Auto built with **React**, featu
 ---
 
 ```
-
-
 🧪 Local Development
 
 
