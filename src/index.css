@@ -1,0 +1,79 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nsauto-yellow: #EDBC18;
+  --nsauto-black: #000000;
+}
+
+.blog-content h2 {
+  @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.blog-content h3 {
+  @apply text-xl font-semibold mt-6 mb-3;
+}
+
+.blog-content h4 {
+  @apply text-lg font-medium mt-4 mb-2;
+}
+
+.blog-content p {
+  @apply mb-4 text-gray-700;
+}
+
+.blog-content ul {
+  @apply list-disc pl-6 mb-4;
+}
+
+.blog-content li {
+  @apply mb-2;
+}
+
+/* Add animation classes */
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
