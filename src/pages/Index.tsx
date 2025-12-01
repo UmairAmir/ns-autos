@@ -6,6 +6,8 @@ import ServicesOverview from '../components/home-page/ServicesOverview';
 import ServiceSection from '../components/home-page/services-section/ServiceSection';
 import ServiceGallery from '../components/home-page/services-section/ServiceGallery';
 import AboutSection from '../components/home-page/AboutSection';
+import FAQSection from '../components/home-page/FAQSection';
+import TestimonialsSection from '../components/home-page/TestimonialsSection';
 import SalesEnquiry from '../components/home-page/SalesEnquiry';
 import Footer from '../components/footer/Footer';
 import FloatingQuickActions from '../components/FloatingQuickActions'; // ✅ add this
@@ -106,6 +108,8 @@ const Index = () => {
       </div>
       
       <ServiceGallery />
+      <TestimonialsSection />
+      <FAQSection />
       <SalesEnquiry />
       <AboutSection />
       {/* <TeamSection /> */}
