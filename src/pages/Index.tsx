@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '../components/navbar/Navbar';
 import HeroSection from '../components/home-page/HeroSection';
 import ServicesOverview from '../components/home-page/ServicesOverview';
+import DetailedServicesSection from '../components/home-page/DetailedServicesSection';
 import ServiceSection from '../components/home-page/services-section/ServiceSection';
 import ServiceGallery from '../components/home-page/services-section/ServiceGallery';
 import AboutSection from '../components/home-page/AboutSection';
@@ -84,6 +85,7 @@ const Index = () => {
       <FloatingQuickActions />
       <HeroSection />
       <ServicesOverview />
+      <DetailedServicesSection />
       {/* <ServiceIcons /> */}
       <hr />
       

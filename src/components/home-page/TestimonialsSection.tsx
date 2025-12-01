@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Star, StarHalf } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -77,6 +78,11 @@ const TestimonialsSection = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }) as any,
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
