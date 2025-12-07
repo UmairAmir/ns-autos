@@ -29,21 +29,26 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="flex flex-col items-center justify-center">
             <img src="/icons/call.svg" alt="Phone" className="mb-2" />
-            <p className="text-sm mb-1">+971-4-238-1112</p>
-            <p className="text-sm">+971 54 266 7527</p>
+            <a href="tel:+97142381112" className="text-sm mb-1 hover:text-nsauto-yellow hover:scale-105 transition-transform inline-block cursor-pointer">+971-4-238-1112</a>
+            <a href="tel:+971542667527" className="text-sm hover:text-nsauto-yellow hover:scale-105 transition-transform inline-block cursor-pointer">+971 54 266 7527</a>
           </div>
 
           <div className="flex flex-col items-center justify-center">
             <img src="/icons/address.svg" alt="Address" className="mb-2" />
-            <p className="text-sm text-center">
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=NS%20Auto%2C%20Dubai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-center hover:text-nsauto-yellow hover:scale-105 transition-transform inline-block cursor-pointer"
+            >
               Al quoz industrial area 3, 17A street RKM warehouse 31, 40. PO Box
               124026, Dubai UAE
-            </p>
+            </a>
           </div>
 
           <div className="flex flex-col items-center justify-center">
             <img src="/icons/email.svg" alt="Email" className="mb-2 h-7 w-12" />
-            <p className="text-sm">sales@nsauto.ae</p>
+            <a href="mailto:sales@nsauto.ae" className="text-sm hover:text-nsauto-yellow hover:scale-105 transition-transform inline-block cursor-pointer">sales@nsauto.ae</a>
           </div>
         </div>
 

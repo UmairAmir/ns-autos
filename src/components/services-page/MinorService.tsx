@@ -1,6 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CylinderCardGroup from "../cyliner-card/CylinderCardGroup";
+import ServicesOverview from "../home-page/ServicesOverview";
+import AboutSection from "../home-page/AboutSection";
+import WhyChooseUs from "../home-page/WhyChooseUs";
+import CTASection from "../home-page/CTASection";
+import FAQSection from "../home-page/FAQSection";
 
 export default function MinorService() {
   const carImage = "/services/minor-service/service-img.png";
@@ -118,6 +123,12 @@ export default function MinorService() {
           <CylinderCardGroup packages={services} />
         </div>
       </div>
+
+      <ServicesOverview />
+      <AboutSection />
+      <WhyChooseUs />
+      <CTASection />
+      <FAQSection />
     </div>
   );
 }
