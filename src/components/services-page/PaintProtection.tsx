@@ -1,6 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import VehicleCardGroup from "../vehicle-card/VehicleCardGroup";
+import ServicesOverview from "../home-page/ServicesOverview";
+import AboutSection from "../home-page/AboutSection";
+import WhyChooseUs from "../home-page/WhyChooseUs";
+import CTASection from "../home-page/CTASection";
+import FAQSection from "../home-page/FAQSection";
 
 export default function PaintProtection() {
   const services = [
@@ -85,6 +90,12 @@ export default function PaintProtection() {
           <VehicleCardGroup packages={services} />
         </div>
       </div>
+
+      <ServicesOverview />
+      <AboutSection />
+      <WhyChooseUs />
+      <CTASection />
+      <FAQSection />
     </div>
   );
 }

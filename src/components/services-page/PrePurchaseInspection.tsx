@@ -1,6 +1,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import ServicesOverview from "../home-page/ServicesOverview";
+import AboutSection from "../home-page/AboutSection";
+import WhyChooseUs from "../home-page/WhyChooseUs";
+import CTASection from "../home-page/CTASection";
+import FAQSection from "../home-page/FAQSection";
 
 export default function PrePurchaseInspection() {
   const inspectionServices = [
@@ -114,6 +119,12 @@ export default function PrePurchaseInspection() {
           </div>
         </div>
       </div>
+      
+      <ServicesOverview />
+      <AboutSection />
+      <WhyChooseUs />
+      <CTASection />
+      <FAQSection />
     </div>
   );
 }
