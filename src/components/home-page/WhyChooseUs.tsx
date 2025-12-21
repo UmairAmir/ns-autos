@@ -2,8 +2,19 @@ import React from 'react';
 import { ShieldCheck, Users, BadgeCheck, Wrench } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const WhyChooseUs = () => {
-  const features = [
+interface FeatureItem {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+interface WhyChooseUsProps {
+  features?: FeatureItem[];
+  description?: string;
+}
+
+const WhyChooseUs = ({ features, description }: WhyChooseUsProps) => {
+  const defaultFeatures = [
     {
       title: "Expert Technicians",
       description: "Our certified mechanics have years of experience handling all types of vehicles, ensuring top-notch service every time.",
@@ -26,6 +37,9 @@ const WhyChooseUs = () => {
     }
   ];
 
+  const displayFeatures = features || defaultFeatures;
+  const defaultDescription = "We are committed to delivering the best automotive care in Dubai. Here is why thousands of customers trust us with their vehicles.";
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8">
@@ -34,13 +48,12 @@ const WhyChooseUs = () => {
             Why <span className="text-nsauto-yellow">Choose Us?</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We are committed to delivering the best automotive care in Dubai. 
-            Here is why thousands of customers trust us with their vehicles.
+            {description || defaultDescription}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+          {displayFeatures.map((feature, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-50 text-center group">
               <CardHeader className="flex flex-col items-center pt-8 pb-4">
                 <div className="mb-4 p-4 bg-white rounded-full shadow-sm group-hover:scale-110 transition-transform duration-300">

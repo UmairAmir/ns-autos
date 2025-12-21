@@ -10,6 +10,19 @@ import FAQSection from "../home-page/FAQSection";
 export default function MinorService() {
   const carImage = "/services/minor-service/service-img.png";
 
+  React.useEffect(() => {
+    document.title = "Minor Car Service in Dubai | Fast & Reliable Care";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Keep your car running smoothly with minor car service in Dubai. Expert checks for all vehicles—call or WhatsApp now to book today.");
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = "description";
+      meta.content = "Keep your car running smoothly with minor car service in Dubai. Expert checks for all vehicles—call or WhatsApp now to book today.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const services = [
     {
       cylinderCount: "4 CYLINDER",
@@ -124,11 +137,44 @@ export default function MinorService() {
         </div>
       </div>
 
-      <ServicesOverview />
-      <AboutSection />
+      <ServicesOverview 
+        introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>} 
+        introText="NS Auto is a fully operational car service and warranty center in Dubai. Trusted by thousands of customers and partnered with leading insurance companies, we provide professional car services, including car repairs, routine servicing, and complete garage solutions for all vehicle types." 
+      />
+      <AboutSection 
+        title={<>About <span className="text-nsauto-yellow">NS Auto</span></>} 
+        description="NS Auto is a trusted car garage in Dubai, providing high-quality car services and repairs. With over 20 years of experience in the UAE, we are known for reliable and professional automotive care. We offer a wide range of services, from routine car servicing to specialized repairs. Our expertise also covers car body kits, window tinting, paint protection, and professional car painting. NS Auto offers customized warranty and service packages to suit individual customer needs, ensuring dependable and customer-focused automotive solutions."
+      />
       <WhyChooseUs />
       <CTASection />
-      <FAQSection />
+      <FAQSection 
+        items={[
+          {
+            question: "What is included in a minor car service?",
+            answer: "A minor service includes basic inspections, fluid checks, oil change, filter checks, and general safety assessment to keep your car running smoothly."
+          },
+          {
+            question: "How often should I get a minor service in Dubai?",
+            answer: "We recommend a minor car service every 5,000–10,000 km, depending on driving conditions and vehicle type."
+          },
+          {
+            question: "Do you provide minor service for luxury cars?",
+            answer: "Yes, we specialize in premium and luxury cars such as BMW, Mercedes, Porsche, Audi, Range Rover, and more."
+          },
+          {
+            question: "How long does a minor car service take?",
+            answer: "A minor service usually takes 1–2 hours, depending on the vehicle and inspection requirements."
+          },
+          {
+            question: "Do you offer minor car service across Dubai?",
+            answer: "Yes, we serve all major Dubai areas including Marina, Palm Jumeirah, Downtown, Business Bay, JVC, JLT, Dubai Hills, and nearby locations."
+          },
+          {
+            question: "How can I book a minor car service?",
+            answer: "You can call or WhatsApp us to schedule your minor car service at a convenient time."
+          }
+        ]}
+      />
     </div>
   );
 }

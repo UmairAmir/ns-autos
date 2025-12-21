@@ -6,6 +6,19 @@ import ServiceFeatures from "../components/home-page/services-section/ServiceFea
 import PageBanner from "../components/hero-section/PageBanner";
 
 const About = () => {
+  React.useEffect(() => {
+    document.title = "About NS Auto | Trusted Car Garage in Dubai";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "NS Auto has 20+ years of experience in Dubai providing reliable car services and repairs. Call or WhatsApp to learn more about us.");
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = "description";
+      meta.content = "NS Auto has 20+ years of experience in Dubai providing reliable car services and repairs. Call or WhatsApp to learn more about us.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const aboutTextRef = useRef(null);
   const aboutImageRef = useRef(null);

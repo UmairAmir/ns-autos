@@ -6,6 +6,19 @@ import CylinderCardGroup from "../components/cyliner-card/CylinderCardGroup";
 import PageBanner from "../components/hero-section/PageBanner";
 
 const Warranty = () => {
+  React.useEffect(() => {
+    document.title = "Car Warranty Services Dubai | NS Auto Coverage";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Protect your car with NS Auto warranty services in Dubai. Genuine coverage for parts and labor—call or WhatsApp to secure your plan.");
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = "description";
+      meta.content = "Protect your car with NS Auto warranty services in Dubai. Genuine coverage for parts and labor—call or WhatsApp to secure your plan.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const oneYearPackages = [
     {
       cylinderCount: "4 CYLINDER",

@@ -1,6 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Users, BadgeCheck, ShieldCheck, Wrench } from "lucide-react";
 import ServicesOverview from "../home-page/ServicesOverview";
 import AboutSection from "../home-page/AboutSection";
 import WhyChooseUs from "../home-page/WhyChooseUs";
@@ -8,6 +9,18 @@ import CTASection from "../home-page/CTASection";
 import FAQSection from "../home-page/FAQSection";
 
 export default function PrePurchaseInspection() {
+  React.useEffect(() => {
+    document.title = "Pre Purchase Car Inspection Dubai | NS Auto Experts";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Ensure your vehicle is in top condition with pre purchase inspection in Dubai. Trusted experts check all cars—call or WhatsApp to book today.");
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = "description";
+      meta.content = "Ensure your vehicle is in top condition with pre purchase inspection in Dubai. Trusted experts check all cars—call or WhatsApp to book today.";
+      document.head.appendChild(meta);
+    }
+  }, []);
   const inspectionServices = [
     {
       icon: "/services/pre-purchase-inspection/chassis-damage-check.svg",
@@ -120,11 +133,70 @@ export default function PrePurchaseInspection() {
         </div>
       </div>
       
-      <ServicesOverview />
-      <AboutSection />
-      <WhyChooseUs />
-      <CTASection />
-      <FAQSection />
+      <ServicesOverview 
+        introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
+        introText="NS Auto provides professional pre purchase inspection services in Dubai. Trusted by thousands of customers, our inspections cover all aspects of vehicle condition, including engine, suspension, brakes, bodywork, and overall performance, helping you make a confident purchase."
+      />
+      <AboutSection 
+        title={<>About <span className="text-nsauto-yellow">NS Auto</span></>}
+        description="NS Auto is a trusted car garage in Dubai, providing professional automotive services for over 20 years. We offer pre purchase inspections to help customers make informed decisions and ensure vehicle quality. Our expertise also includes car body kits, paint protection, window tinting, and professional car painting. NS Auto provides customized service and warranty packages to meet every client’s needs, delivering reliable and premium automotive care."
+      />
+      <WhyChooseUs 
+        description="We are dedicated to delivering dependable pre purchase inspection services in Dubai, trusted by thousands of customers for thorough and accurate vehicle assessments."
+        features={[
+          {
+            title: "Expert Technicians",
+            description: "Our certified technicians perform detailed inspections on all vehicles, identifying issues before purchase and providing reliable guidance.",
+            icon: <Users className="w-12 h-12 text-nsauto-yellow" />
+          },
+          {
+            title: "Genuine Parts",
+            description: "We use high-quality assessment tools and replacement parts when necessary to ensure vehicle safety and longevity.",
+            icon: <BadgeCheck className="w-12 h-12 text-nsauto-yellow" />
+          },
+          {
+            title: "Transparent Pricing",
+            description: "All inspections are clearly priced with no hidden costs, providing full transparency before any work begins.",
+            icon: <ShieldCheck className="w-12 h-12 text-nsauto-yellow" />
+          },
+          {
+            title: "Comprehensive Warranty",
+            description: "Eligible inspections and minor corrective services are covered by warranty on parts and labor for peace of mind.",
+            icon: <Wrench className="w-12 h-12 text-nsauto-yellow" />
+          }
+        ]}
+      />
+      <CTASection 
+        description={<>For pre purchase inspection inquiries or bookings, contact NS Auto. Our experienced team is ready to assist you. Call or WhatsApp today for a free quotation or to schedule your inspection.</>}
+      />
+      <FAQSection 
+        items={[
+          {
+            question: "What is included in a pre purchase inspection?",
+            answer: "A pre purchase inspection includes checking the engine, suspension, brakes, bodywork, electrical systems, and overall vehicle condition."
+          },
+          {
+            question: "Can you inspect luxury and premium cars?",
+            answer: "Yes, we specialize in inspecting premium vehicles such as BMW, Mercedes, Porsche, Audi, Ferrari, Range Rover, and other luxury brands."
+          },
+          {
+            question: "How long does a pre purchase inspection take?",
+            answer: "Inspections typically take 1–2 hours, depending on the vehicle type and condition."
+          },
+          {
+            question: "Do you provide pre purchase inspections across Dubai?",
+            answer: "Yes, we serve Marina, Palm Jumeirah, Downtown, Business Bay, JVC, JLT, Dubai Hills, and nearby locations."
+          },
+          {
+            question: "How can I book a pre purchase inspection?",
+            answer: "You can call or WhatsApp our team to schedule a pre purchase inspection at your convenience."
+          },
+          {
+            question: "Will the inspection prevent future issues?",
+            answer: "While inspections can’t guarantee future problems, they provide a clear assessment of the current vehicle condition, helping you make informed decisions."
+          }
+        ]}
+      />
     </div>
   );
 }

@@ -8,6 +8,19 @@ import BodyShopCard from "@/components/body-shop-page/BodyShopCard";
 import BodyShopCardGroup from "@/components/body-shop-page/BodyShopCardGroup";
 
 const BodyShop = () => {
+  React.useEffect(() => {
+    document.title = "Car Body Shop Dubai | NS Auto Expert Repairs";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "NS Auto provides professional car body repairs in Dubai. Restore your vehicle’s look with expert care—call or WhatsApp to book now.");
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = "description";
+      meta.content = "NS Auto provides professional car body repairs in Dubai. Restore your vehicle’s look with expert care—call or WhatsApp to book now.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   const services = [
     { name: "CAR ACCIDENT REPAIR", icon: "/body-shop-page/icons/1.svg" },
     { name: "CAR COLLISION REPAIR", icon: "/body-shop-page/icons/2.svg" },

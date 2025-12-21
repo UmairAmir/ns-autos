@@ -14,6 +14,19 @@ const Contact = () => {
   const detailsRef = useRef<HTMLDivElement>(null);
   const phoneRef = useRef<HTMLDivElement>(null);
 
+  React.useEffect(() => {
+    document.title = "Contact NS Auto Dubai | Car Service & Repair";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Reach NS Auto in Dubai for car services, repairs, or inquiries. Call or WhatsApp our experienced team to get a free quotation today.");
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = "description";
+      meta.content = "Reach NS Auto in Dubai for car services, repairs, or inquiries. Call or WhatsApp our experienced team to get a free quotation today.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   // Use refs for animations
   const isFormInView = useInView(formContainerRef, { once: true });
   const isDetailsInView = useInView(detailsRef, { once: true });

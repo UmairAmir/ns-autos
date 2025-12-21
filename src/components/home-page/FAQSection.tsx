@@ -6,8 +6,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const FAQSection = () => {
-  const faqs = [
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FAQSectionProps {
+  items?: FAQItem[];
+}
+
+const FAQSection = ({ items }: FAQSectionProps) => {
+  const defaultFaqs = [
     {
       question: "What types of vehicles do you service?",
       answer: "We service all major car brands, including luxury and high-performance vehicles. Our technicians are trained to handle a wide range of makes and models."
@@ -34,6 +43,8 @@ const FAQSection = () => {
     }
   ];
 
+  const faqs = items || defaultFaqs;
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
@@ -45,7 +56,7 @@ const FAQSection = () => {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left text-lg font-medium text-gray-900 hover:text-primary transition-colors">
+              <AccordionTrigger className="text-left text-lg font-medium text-gray-900 hover:text-primary transition-colors hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-gray-600 text-base leading-relaxed">

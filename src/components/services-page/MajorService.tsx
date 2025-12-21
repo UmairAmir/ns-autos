@@ -1,6 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Users, BadgeCheck, ShieldCheck, Wrench } from "lucide-react";
 import CylinderCardGroup from "../cyliner-card/CylinderCardGroup";
 import ServicesOverview from "../home-page/ServicesOverview";
 import AboutSection from "../home-page/AboutSection";
@@ -10,6 +11,19 @@ import FAQSection from "../home-page/FAQSection";
 
 export default function MajorService() {
   const carImage = "/services/major-service/service-img.png";
+
+  React.useEffect(() => {
+    document.title = "Major Car Service in Dubai | Complete Vehicle Care";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Get professional major car service in Dubai for long-term performance and safety. Trusted experts for all vehicles—call or WhatsApp today.");
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = "description";
+      meta.content = "Get professional major car service in Dubai for long-term performance and safety. Trusted experts for all vehicles—call or WhatsApp today.";
+      document.head.appendChild(meta);
+    }
+  }, []);
 
   const services = [
     {
@@ -142,11 +156,70 @@ export default function MajorService() {
         </div>
       </div>
 
-      <ServicesOverview />
-      <AboutSection />
-      <WhyChooseUs />
-      <CTASection />
-      <FAQSection />
+      <ServicesOverview 
+        introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
+        introText="NS Auto operates as a full-service car service and warranty center in Dubai. Trusted by thousands of customers and partnered with leading insurance companies, we provide professional major car servicing, complete inspections, and comprehensive garage solutions for all vehicle types."
+      />
+      <AboutSection 
+        title={<>About <span className="text-nsauto-yellow">NS Auto</span></>}
+        description="NS Auto is a reliable car garage in Dubai, offering professional car services and repairs. With over 20 years of experience in the UAE, we provide complete automotive care, including major car servicing and specialized repairs. Our services also cover car body kits, window tinting, paint protection, and professional car painting. We offer customized service and warranty packages designed to meet individual customer needs while maintaining quality and reliability."
+      />
+      <WhyChooseUs 
+        description="We focus on delivering dependable major car servicing in Dubai with attention to quality and customer satisfaction."
+        features={[
+          {
+            title: "Expert Technicians",
+            description: "Our certified technicians have years of experience handling all types of vehicles, ensuring every major service is done accurately and professionally.",
+            icon: <Users className="w-12 h-12 text-nsauto-yellow" />
+          },
+          {
+            title: "Genuine Parts",
+            description: "We use only genuine, high-quality spare parts to maintain your vehicle’s performance and longevity.",
+            icon: <BadgeCheck className="w-12 h-12 text-nsauto-yellow" />
+          },
+          {
+            title: "Transparent Pricing",
+            description: "We provide clear and detailed quotes before starting any work, with no hidden costs or surprises.",
+            icon: <ShieldCheck className="w-12 h-12 text-nsauto-yellow" />
+          },
+          {
+            title: "Comprehensive Warranty",
+            description: "All eligible services come with warranty coverage on parts and labor, giving you peace of mind and reliable service.",
+            icon: <Wrench className="w-12 h-12 text-nsauto-yellow" />
+          }
+        ]}
+      />
+      <CTASection 
+        description={<>For major car service inquiries or bookings, feel free to contact us. Our experienced team is ready to assist you. Call us today for a free quotation or to book an appointment.</>}
+      />
+      <FAQSection 
+        items={[
+          {
+            question: "What is included in a major car service?",
+            answer: "A major service includes detailed inspections, fluid replacements, filter changes, system checks, and overall vehicle performance assessment."
+          },
+          {
+            question: "When should I get a major car service in Dubai?",
+            answer: "A major car service is usually recommended every 30,000–40,000 km or according to the manufacturer’s service schedule."
+          },
+          {
+            question: "Do you provide major service for luxury cars?",
+            answer: "Yes, we specialize in premium and luxury vehicles such as BMW, Mercedes, Porsche, Audi, Range Rover, and other high-end brands."
+          },
+          {
+            question: "How long does a major car service take?",
+            answer: "A major service typically takes one full day, depending on the vehicle condition and required inspections."
+          },
+          {
+            question: "Do you offer major car service across Dubai?",
+            answer: "Yes, we serve all major Dubai areas including Marina, Palm Jumeirah, Downtown, Business Bay, JVC, JLT, Dubai Hills, and nearby locations."
+          },
+          {
+            question: "How can I book a major car service?",
+            answer: "You can call or WhatsApp our team to schedule your major car service at a convenient time."
+          }
+        ]}
+      />
     </div>
   );
 }

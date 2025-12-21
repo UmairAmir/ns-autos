@@ -1,10 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const AboutSection = () => {
+interface AboutSectionProps {
+  title?: React.ReactNode;
+  description?: string;
+  readMoreIdx?: string;
+}
+
+const AboutSection = ({ title, description, readMoreIdx }: AboutSectionProps) => {
+  const defaultTitle = (
+    <>
+      ABOUT <span className="text-nsauto-yellow">US</span>
+    </>
+  );
+
+  const defaultDescription = "At NS Auto, we are your trusted car garage in Dubai, offering top-quality car services and repairs. With over 20 years in the UAE and a strong reputation for excellence, we provide comprehensive automotive care, from routine car service to specialized repairs. Our expertise includes car body kits, window tints, paint protection, and professional car painting. NS Auto’s customized warranty and service packages are designed to meet every client’s needs. Choose us for reliable, customer-focused solutions and experience premier automotive care.";
+
   return (
     <section
-      id="about"
+      id={readMoreIdx || "about"}
       className="py-20 bg-gradient-to-r from-[#dfdfe5] to-[#a2b6c5]"
     >
       <div className="container mx-auto px-4">
@@ -32,15 +46,10 @@ const AboutSection = () => {
             viewport={{ once: false }}
           >
             <h2 className="text-4xl font-bold mb-6">
-              ABOUT <span className="text-nsauto-yellow">US</span>
+              {title || defaultTitle}
             </h2>
             <p className="text-gray-700 mb-6">
-              At NS Auto, we are your trusted car garage in Dubai, offering top-quality car services and repairs.
-              With over 20 years in the UAE and a strong reputation for excellence, we provide comprehensive automotive care,
-              from routine car service to specialized repairs. Our expertise includes car body kits, window tints,
-              paint protection, and professional car painting. NS Auto’s customized warranty and service packages are
-              designed to meet every client’s needs. Choose us for reliable, customer-focused solutions and experience premier
-              automotive care.
+              {description || defaultDescription}
             </p>
             <a
               href="#contact"

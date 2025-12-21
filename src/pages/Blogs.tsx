@@ -139,6 +139,19 @@ const blogPosts: BlogPost[] = [
 const Blogs = () => {
   const [currentBlog, setCurrentBlog] = useState<number>(-1);
 
+  React.useEffect(() => {
+    document.title = "Automotive Tips & News Dubai | NS Auto Blog";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Stay updated with NS Auto’s automotive tips, guides, and news in Dubai. Learn, protect, and maintain your car—read our blog today.");
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = "description";
+      meta.content = "Stay updated with NS Auto’s automotive tips, guides, and news in Dubai. Learn, protect, and maintain your car—read our blog today.";
+      document.head.appendChild(meta);
+    }
+  }, []);
+
   return (
     <>
       <Navbar currentPage="BLOGS" />
