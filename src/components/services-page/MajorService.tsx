@@ -66,10 +66,10 @@ export default function MajorService() {
     <div className="bg-white">
       {/* Title and Description */}
       <div className="container mx-auto px-4 py-16 text-center">
-        <h1 className="text-6xl font-bold mb-6">
+        <h2 className="text-6xl font-bold mb-6">
           <span className="text-black">MAJOR </span>
           <span className="text-nsauto-yellow">SERVICE</span>
-        </h1>
+        </h2>
         <p className="max-w-3xl mx-auto text-lg mb-16">
           Discover comprehensive car services near you that prioritize your vehicle's performance and safety.
           Our expert technicians deliver tailored major service packages to keep your car running at its best.

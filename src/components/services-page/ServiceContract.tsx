@@ -79,10 +79,10 @@ export default function ServiceContract() {
             transition={{ duration: 0.8 }}
             viewport={{ once: false }}
           >
-            <h1 className="text-5xl font-bold mb-6">
+            <h2 className="text-5xl font-bold mb-6">
               <span className="text-black">SERVICE </span>
               <span className="text-nsauto-yellow">CONTRACT</span>
-            </h1>
+            </h2>
             <p className="text-lg mb-6">
               Protect your vehicle with our comprehensive service contracts for cars in Dubai, offering reliable maintenance plans tailored to your needs. Explore flexible packages at NS Auto to keep your car running smoothly.
             </p>

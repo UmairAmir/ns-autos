@@ -77,10 +77,10 @@ export default function PaintProtection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: false }}
           >
-            <h1 className="text-5xl font-bold mb-6">
+            <h2 className="text-5xl font-bold mb-6">
               <span className="text-black">PAINT </span>
               <span className="text-nsauto-yellow">PROTECTION</span>
-            </h1>
+            </h2>
             <p className="text-lg mb-6">
               Protect your vehicle's exterior with our premium car painting
               services in Dubai and advanced paint protection film solutions.

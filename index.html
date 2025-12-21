@@ -65,6 +65,24 @@
       name="twitter:image"
       content="https://lovable.dev/opengraph-image-p98pqg.png"
     />
+    <script>
+      // Prevent Tawk.to or other scripts from changing the title to "1 new message"
+      (function() {
+        var originalTitle = document.title;
+        var titleObserver = new MutationObserver(function(mutations) {
+          if (document.title.toLowerCase().indexOf("new message") !== -1 || document.title.toLowerCase().indexOf("message from") !== -1) {
+             document.title = originalTitle;
+          } else {
+             originalTitle = document.title;
+          }
+        });
+        
+        var titleElement = document.querySelector('title');
+        if (titleElement) {
+          titleObserver.observe(titleElement, { childList: true });
+        }
+      })();
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"

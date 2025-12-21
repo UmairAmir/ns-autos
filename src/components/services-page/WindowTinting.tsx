@@ -84,10 +84,10 @@ export default function WindowTinting() {
             transition={{ duration: 0.8 }}
             viewport={{ once: false }}
           >
-            <h1 className="text-5xl font-bold mb-6">
+            <h2 className="text-5xl font-bold mb-6">
               <span className="text-black">WINDOW </span>
               <span className="text-nsauto-yellow">TINTING</span>
-            </h1>
+            </h2>
             <p className="text-lg mb-6">
               Experience the best in window tinting in Dubai, designed to enhance your vehicle's appearance while providing UV protection and increased privacy. Trust our experts to deliver high-quality installations tailored to your needs.
             </p>

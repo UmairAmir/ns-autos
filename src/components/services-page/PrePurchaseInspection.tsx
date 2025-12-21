@@ -104,10 +104,10 @@ export default function PrePurchaseInspection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: false }}
           >
-            <h1 className="text-5xl font-bold mb-6">
+            <h2 className="text-5xl font-bold mb-6">
               <span className="text-black">PURCHASE </span>
               <span className="text-nsauto-yellow">INSPECTION</span>
-            </h1>
+            </h2>
             <p className="text-lg mb-6">
               Receive a comprehensive vehicle check at the seller's location in Dubai, including diagnostics, road tests, and detailed inspections of critical components. Our service ensures a safe purchase with complete confidence and includes detailed photos for your peace of mind.
             </p>
