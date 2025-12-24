@@ -67,17 +67,20 @@
     />
     <script>
       // Prevent Tawk.to or other scripts from changing the title to "1 new message"
-      (function() {
+      (function () {
         var originalTitle = document.title;
-        var titleObserver = new MutationObserver(function(mutations) {
-          if (document.title.toLowerCase().indexOf("new message") !== -1 || document.title.toLowerCase().indexOf("message from") !== -1) {
-             document.title = originalTitle;
+        var titleObserver = new MutationObserver(function (mutations) {
+          if (
+            document.title.toLowerCase().indexOf("new message") !== -1 ||
+            document.title.toLowerCase().indexOf("message from") !== -1
+          ) {
+            document.title = originalTitle;
           } else {
-             originalTitle = document.title;
+            originalTitle = document.title;
           }
         });
-        
-        var titleElement = document.querySelector('title');
+
+        var titleElement = document.querySelector("title");
         if (titleElement) {
           titleObserver.observe(titleElement, { childList: true });
         }
@@ -100,7 +103,14 @@
       ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K7MQJ2LR"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
