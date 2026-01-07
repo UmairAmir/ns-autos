@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, BadgeCheck, ShieldCheck, Wrench } from "lucide-react";
+import { Users, BadgeCheck, ShieldCheck, Wrench, Settings, Shield, Sun, FileCheck, Search } from "lucide-react";
 import ServicesOverview from "../home-page/ServicesOverview";
 import AboutSection from "../home-page/AboutSection";
 import WhyChooseUs from "../home-page/WhyChooseUs";
@@ -136,13 +136,44 @@ export default function PrePurchaseInspection() {
       <ServicesOverview 
         introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
         introText="NS Auto provides professional pre purchase inspection services in Dubai. Trusted by thousands of customers, our inspections cover all aspects of vehicle condition, including engine, suspension, brakes, bodywork, and overall performance, helping you make a confident purchase."
+        layout="grid"
         services={[
-          { label: "MINOR SERVICE", link: "/car-minor-service-dubai" },
-          { label: "MAJOR SERVICE", link: "/car-major-service-dubai" },
-          { label: "PAINT PROTECTION", link: "/paint-protection-dubai" },
-          { label: "WINDOW TINTING", link: "/window-tinting-dubai" },
-          { label: "SERVICE CONTRACT", link: "/service-contract-dubai" },
-          { label: "PRE PURCHASE INSPECTION", link: "/pre-purchase-inspection-dubai" },
+          { 
+            label: "Minor Service Dubai", 
+            link: "/car-minor-service-dubai",
+            description: "Routine minor service for Dubai's daily drivers. Basic maintenance keeps small problems from growing. Trust our mechanics for reliable minor service.",
+            icon: <Wrench className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Major Service Dubai", 
+            link: "/car-major-service-dubai",
+            description: "Complete major service for all vehicle types in Dubai. Spark plugs, air filters, and belts replaced. Drive safely with our comprehensive major service.",
+            icon: <Settings className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Paint Protection Dubai", 
+            link: "/paint-protection-dubai",
+            description: "Professional paint protection installation in Dubai garages. Long-lasting protection against sun and sandstorms. Choose from multiple protection package levels.",
+            icon: <Shield className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Window Tinting Dubai", 
+            link: "/window-tinting-dubai",
+            description: "Premium window tinting with Dubai's best installers. Heat rejection up to 99 percent guaranteed. Enjoy cooler cabin temperatures year-round.",
+            icon: <Sun className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Service Contract Dubai", 
+            link: "/service-contract-dubai",
+            description: "Value-packed service contracts for Dubai motorists. Monthly and yearly payment options offered. Protect your budget with predictable maintenance costs.",
+            icon: <FileCheck className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Pre Purchase Inspection Dubai", 
+            link: "/pre-purchase-inspection-dubai",
+            description: "Trusted pre-purchase inspection services in Dubai UAE. Accident history and odometer verification included. Buy your next car with complete confidence.",
+            icon: <Search className="w-12 h-12 text-nsauto-yellow" />
+          },
         ]}
       />
       <AboutSection 

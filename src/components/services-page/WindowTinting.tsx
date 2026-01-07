@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, BadgeCheck, ShieldCheck, Wrench } from "lucide-react";
+import { Users, BadgeCheck, ShieldCheck, Wrench, Settings, Shield, Sun, FileCheck, Search } from "lucide-react";
 import VehicleCardGroup from "../vehicle-card/VehicleCardGroup";
 import ServicesOverview from "../home-page/ServicesOverview";
 import AboutSection from "../home-page/AboutSection";
@@ -125,13 +125,44 @@ export default function WindowTinting() {
       <ServicesOverview 
         introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
         introText="NS Auto provides professional window tinting services in Dubai. Trusted by thousands of customers, we offer complete automotive care, including premium tint application, car body detailing, and vehicle protection solutions, ensuring comfort, privacy, and long-lasting quality."
+        layout="grid"
         services={[
-          { label: "MINOR SERVICE", link: "/car-minor-service-dubai" },
-          { label: "MAJOR SERVICE", link: "/car-major-service-dubai" },
-          { label: "PAINT PROTECTION", link: "/paint-protection-dubai" },
-          { label: "WINDOW TINTING", link: "/window-tinting-dubai" },
-          { label: "SERVICE CONTRACT", link: "/service-contract-dubai" },
-          { label: "PRE PURCHASE INSPECTION", link: "/pre-purchase-inspection-dubai" },
+          { 
+            label: "Minor Service Dubai", 
+            link: "/car-minor-service-dubai",
+            description: "Efficient minor car service in Dubai workshops. Lubrication, adjustments, and minor repairs handled expertly. Your vehicle stays roadworthy with our regular maintenance.",
+            icon: <Wrench className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Major Service Dubai", 
+            link: "/car-major-service-dubai",
+            description: "Full-scale major servicing for Dubai car owners. Timing belt, brake pads, and fluid changes included. Experience improved performance after our major service.",
+            icon: <Settings className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Paint Protection Dubai", 
+            link: "/paint-protection-dubai",
+            description: "Top-tier paint protection technology in Dubai. Hydrophobic coatings repel water and dirt naturally. Keep your car looking brand new always.",
+            icon: <Shield className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Window Tinting Dubai", 
+            link: "/window-tinting-dubai",
+            description: "High-quality window tinting across Dubai UAE. Privacy, comfort, and style in one service. Our tints come with lifetime installation guarantees.",
+            icon: <Sun className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Service Contract Dubai", 
+            link: "/service-contract-dubai",
+            description: "Smart service contracts for Dubai vehicle owners. Predictable costs replace surprise repair bills. Join thousands of satisfied contract holders today.",
+            icon: <FileCheck className="w-12 h-12 text-nsauto-yellow" />
+          },
+          { 
+            label: "Pre Purchase Inspection Dubai", 
+            link: "/pre-purchase-inspection-dubai",
+            description: "Detailed vehicle inspection before you purchase in Dubai. Test drive evaluation and computer diagnostics performed. Make smart buying choices with expert guidance.",
+            icon: <Search className="w-12 h-12 text-nsauto-yellow" />
+          },
         ]}
       />
       <AboutSection 
