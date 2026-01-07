@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 type ServiceItem = {
   id: number;
   title: string;
   image: string;
+  link: string;
 };
 
 const topServices: ServiceItem[] = [
@@ -12,16 +14,19 @@ const topServices: ServiceItem[] = [
     id: 1,
     title: "Paint Protection",
     image: "/home-page/paint-protection-w.png",
+    link: "/services/paint-protection",
   },
   {
     id: 2,
     title: "Body Shop",
     image: "/home-page/body-shop-w.png",
+    link: "/body-shop",
   },
   {
     id: 3,
     title: "Warranty Package",
     image: "/home-page/warranty-package-w.png",
+    link: "/warranty",
   },
 ];
 
@@ -30,16 +35,19 @@ const bottomServices: ServiceItem[] = [
     id: 4,
     title: "Pre Purchase Inspections",
     image: "/home-page/pre-purchase-inspection-w.png",
+    link: "/services/pre-purchase-inspection",
   },
   {
     id: 5,
     title: "Window Tinting",
     image: "/home-page/window-tinting-w.png",
+    link: "/services/window-tinting",
   },
   {
     id: 6,
     title: "Service Contracts",
     image: "/home-page/service-contracts-w.png",
+    link: "/services/service-contract",
   },
 ];
 
@@ -64,36 +72,38 @@ const ServiceGallery = () => {
       onMouseLeave={() => setHoveredId(null)}
       style={customTransform ? { transform: customTransform } : {}}
     >
-      {/* Image container with increased cut size */}
-      <div
-        className="overflow-hidden relative shadow-lg rounded"
-        style={{
-          clipPath: "polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%)",
-        }}
-      >
-        <img
-          src={item.image}
-          alt={item.title}
-          className="w-full h-auto object-cover"
-        />
-        {hoveredId === item.id && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20">
-            <img src="/icons/plus.svg" alt="Plus" className="w-12 h-12" />
-          </div>
-        )}
-      </div>
+      <Link to={item.link}>
+        {/* Image container with increased cut size */}
+        <div
+          className="overflow-hidden relative shadow-lg rounded"
+          style={{
+            clipPath: "polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%)",
+          }}
+        >
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-full h-auto object-cover"
+          />
+          {hoveredId === item.id && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20">
+              <img src="/icons/plus.svg" alt="Plus" className="w-12 h-12" />
+            </div>
+          )}
+        </div>
 
-      {/* Title area with increased cut size */}
-      <div
-        className="absolute bottom-0 left-0 px-4 py-2 text-black font-bold uppercase transition-all"
-        style={{
-          clipPath: "polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%)",
-          backgroundColor: hoveredId === item.id ? "#fff" : "#f7b500",
-          transform: "translateY(50%)",
-        }}
-      >
-        <span>{item.title}</span>
-      </div>
+        {/* Title area with increased cut size */}
+        <div
+          className="absolute bottom-0 left-0 px-4 py-2 text-black font-bold uppercase transition-all"
+          style={{
+            clipPath: "polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%)",
+            backgroundColor: hoveredId === item.id ? "#fff" : "#f7b500",
+            transform: "translateY(50%)",
+          }}
+        >
+          <span>{item.title}</span>
+        </div>
+      </Link>
     </motion.div>
   );
 
