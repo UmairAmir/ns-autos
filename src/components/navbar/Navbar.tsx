@@ -27,21 +27,21 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
     { name: "HOME", path: "/" },
     { name: "SERVICES", path: "/services" },
     { name: "BLOGS", path: "/blogs" },
-    { name: "BODY SHOP", path: "/body-shop" },
+    { name: "BODY SHOP", path: "/car-body-shop-dubai" },
     { name: "ABOUT US", path: "/about" },
     { name: "WARRANTY", path: "/warranty" },
     { name: "CONTACT US", path: "/contact" },
   ];
 
   const serviceItems = [
-    { name: "MINOR SERVICE", path: "/services/minor-service" },
-    { name: "MAJOR SERVICE", path: "/services/major-service" },
-    { name: "PAINT PROTECTION", path: "/services/paint-protection" },
-    { name: "WINDOW TINTING", path: "/services/window-tinting" },
-    { name: "SERVICE CONTRACT", path: "/services/service-contract" },
+    { name: "MINOR SERVICE", path: "/car-minor-service-dubai" },
+    { name: "MAJOR SERVICE", path: "/car-major-service-dubai" },
+    { name: "PAINT PROTECTION", path: "/paint-protection-dubai" },
+    { name: "WINDOW TINTING", path: "/window-tinting-dubai" },
+    { name: "SERVICE CONTRACT", path: "/service-contract-dubai" },
     {
       name: "PRE PURCHASE INSPECTION",
-      path: "/services/pre-purchase-inspection",
+      path: "/pre-purchase-inspection-dubai",
     },
     { name: "ANY OTHER REQUIRMENTS", path: "/contact" },
   ];

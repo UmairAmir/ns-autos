@@ -4,17 +4,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const serviceItems = [
-    { name: "Minor Service", path: "/services/minor-service" },
-    { name: "Major Services", path: "/services/major-service" },
-    { name: "Pre Purchase Inspection", path: "/services/pre-purchase-inspection" },
-    { name: "Paint Protection", path: "/services/paint-protection" },
-    { name: "Window Tinting", path: "/services/window-tinting" },
-    { name: "Service Contract", path: "/services/service-contract" },
+    { name: "Minor Service", path: "/car-minor-service-dubai" },
+    { name: "Major Services", path: "/car-major-service-dubai" },
+    { name: "Pre Purchase Inspection", path: "/pre-purchase-inspection-dubai" },
+    { name: "Paint Protection", path: "/paint-protection-dubai" },
+    { name: "Window Tinting", path: "/window-tinting-dubai" },
+    { name: "Service Contract", path: "/service-contract-dubai" },
   ];
 
   const quickLinks = [
     { name: "Home", path: "/" },
-    { name: "Body Shop", path: "/body-shop" },
+    { name: "Body Shop", path: "/car-body-shop-dubai" },
     { name: "About Us", path: "/about" },
     { name: "Contact Us", path: "/contact" },
     { name: "Blogs", path: "/blogs" },

@@ -93,11 +93,11 @@ const BodyShop = () => {
     <>
       <Navbar currentPage="BODY SHOP" />
       <PageBanner
-        title="BODY SHOP"
+        title="BODY SHOP IN DUBAI"
         backgroundImage="/body-shop-page/body-shop-banner.jpg"
         breadcrumbs={[
           { label: "HOME", url: "/" },
-          { label: "BODY SHOP", url: "/body-shop" },
+          { label: "BODY SHOP IN DUBAI", url: "/car-body-shop-dubai" },
         ]}
       />
 
@@ -123,7 +123,7 @@ const BodyShop = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              BODY <span className="text-nsauto-yellow">SHOP</span>
+              BODY SHOP <span className="text-nsauto-yellow">IN DUBAI</span>
             </h2>
             <p className="text-gray-700 mb-6">
               Comprehensive body shop repairs, repainting, and auto detailing at

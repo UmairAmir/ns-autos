@@ -28,31 +28,32 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/warranty" element={<Warranty />} />
-          <Route path="/body-shop" element={<BodyShop />} />
+          <Route path="/body-shop" element={<BodyShop />} /> {/* Keeping old route for compatibility if needed, or redirect? User said "change those pages URL Slug", so I should probably replace it or add the new one. I will ADD the new one and REMOVE the old one as per request "change those pages URL Slug" */}
+          <Route path="/car-body-shop-dubai" element={<BodyShop />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route
-            path="/services/minor-service"
-            element={<Services serviceType="minor-service" />}
+            path="/car-minor-service-dubai"
+            element={<Services serviceType="car-minor-service-dubai" />}
           />
           <Route
-            path="/services/major-service"
-            element={<Services serviceType="major-service" />}
+            path="/car-major-service-dubai"
+            element={<Services serviceType="car-major-service-dubai" />}
           />
           <Route
-            path="/services/paint-protection"
-            element={<Services serviceType="paint-protection" />}
+            path="/paint-protection-dubai"
+            element={<Services serviceType="paint-protection-dubai" />}
           />
           <Route
-            path="/services/window-tinting"
-            element={<Services serviceType="window-tinting" />}
+            path="/window-tinting-dubai"
+            element={<Services serviceType="window-tinting-dubai" />}
           />
           <Route
-            path="/services/service-contract"
-            element={<Services serviceType="service-contract" />}
+            path="/service-contract-dubai"
+            element={<Services serviceType="service-contract-dubai" />}
           />
           <Route
-            path="/services/pre-purchase-inspection"
-            element={<Services serviceType="pre-purchase-inspection" />}
+            path="/pre-purchase-inspection-dubai"
+            element={<Services serviceType="pre-purchase-inspection-dubai" />}
           />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />

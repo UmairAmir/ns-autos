@@ -14,13 +14,13 @@ const topServices: ServiceItem[] = [
     id: 1,
     title: "Paint Protection",
     image: "/home-page/paint-protection-w.png",
-    link: "/services/paint-protection",
+    link: "/paint-protection-dubai",
   },
   {
     id: 2,
     title: "Body Shop",
     image: "/home-page/body-shop-w.png",
-    link: "/body-shop",
+    link: "/car-body-shop-dubai",
   },
   {
     id: 3,
@@ -35,19 +35,19 @@ const bottomServices: ServiceItem[] = [
     id: 4,
     title: "Pre Purchase Inspections",
     image: "/home-page/pre-purchase-inspection-w.png",
-    link: "/services/pre-purchase-inspection",
+    link: "/pre-purchase-inspection-dubai",
   },
   {
     id: 5,
     title: "Window Tinting",
     image: "/home-page/window-tinting-w.png",
-    link: "/services/window-tinting",
+    link: "/window-tinting-dubai",
   },
   {
     id: 6,
     title: "Service Contracts",
     image: "/home-page/service-contracts-w.png",
-    link: "/services/service-contract",
+    link: "/service-contract-dubai",
   },
 ];
 
