@@ -108,6 +108,14 @@ export default function PaintProtection() {
       <ServicesOverview 
         introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
         introText="NS Auto offers professional paint protection services in Dubai. Trusted by thousands of customers, we provide complete automotive care, including protective coatings, car body detailing, and professional car painting. Our services ensure your vehicle maintains a premium look and long-lasting protection."
+        services={[
+          { label: "MINOR SERVICE", link: "/car-minor-service-dubai" },
+          { label: "MAJOR SERVICE", link: "/car-major-service-dubai" },
+          { label: "PAINT PROTECTION", link: "/paint-protection-dubai" },
+          { label: "WINDOW TINTING", link: "/window-tinting-dubai" },
+          { label: "SERVICE CONTRACT", link: "/service-contract-dubai" },
+          { label: "PRE PURCHASE INSPECTION", link: "/pre-purchase-inspection-dubai" },
+        ]}
       />
       <AboutSection 
         title={<>About <span className="text-nsauto-yellow">NS Auto</span></>}

@@ -159,6 +159,14 @@ export default function MajorService() {
       <ServicesOverview 
         introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
         introText="NS Auto operates as a full-service car service and warranty center in Dubai. Trusted by thousands of customers and partnered with leading insurance companies, we provide professional major car servicing, complete inspections, and comprehensive garage solutions for all vehicle types."
+        services={[
+          { label: "MINOR SERVICE", link: "/car-minor-service-dubai" },
+          { label: "MAJOR SERVICE", link: "/car-major-service-dubai" },
+          { label: "PAINT PROTECTION", link: "/paint-protection-dubai" },
+          { label: "WINDOW TINTING", link: "/window-tinting-dubai" },
+          { label: "SERVICE CONTRACT", link: "/service-contract-dubai" },
+          { label: "PRE PURCHASE INSPECTION", link: "/pre-purchase-inspection-dubai" },
+        ]}
       />
       <AboutSection 
         title={<>About <span className="text-nsauto-yellow">NS Auto</span></>}

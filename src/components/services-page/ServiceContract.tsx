@@ -116,6 +116,14 @@ export default function ServiceContract() {
       <ServicesOverview 
         introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
         introText="NS Auto provides professional service contracts in Dubai. Trusted by thousands of customers, our plans include routine maintenance, scheduled servicing, and complete car care solutions for all vehicle types, ensuring convenience, reliability, and long-term performance."
+        services={[
+          { label: "MINOR SERVICE", link: "/car-minor-service-dubai" },
+          { label: "MAJOR SERVICE", link: "/car-major-service-dubai" },
+          { label: "PAINT PROTECTION", link: "/paint-protection-dubai" },
+          { label: "WINDOW TINTING", link: "/window-tinting-dubai" },
+          { label: "SERVICE CONTRACT", link: "/service-contract-dubai" },
+          { label: "PRE PURCHASE INSPECTION", link: "/pre-purchase-inspection-dubai" },
+        ]}
       />
       <AboutSection 
         title={<>About <span className="text-nsauto-yellow">NS Auto</span></>}

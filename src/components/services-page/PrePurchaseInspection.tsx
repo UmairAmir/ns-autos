@@ -136,6 +136,14 @@ export default function PrePurchaseInspection() {
       <ServicesOverview 
         introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
         introText="NS Auto provides professional pre purchase inspection services in Dubai. Trusted by thousands of customers, our inspections cover all aspects of vehicle condition, including engine, suspension, brakes, bodywork, and overall performance, helping you make a confident purchase."
+        services={[
+          { label: "MINOR SERVICE", link: "/car-minor-service-dubai" },
+          { label: "MAJOR SERVICE", link: "/car-major-service-dubai" },
+          { label: "PAINT PROTECTION", link: "/paint-protection-dubai" },
+          { label: "WINDOW TINTING", link: "/window-tinting-dubai" },
+          { label: "SERVICE CONTRACT", link: "/service-contract-dubai" },
+          { label: "PRE PURCHASE INSPECTION", link: "/pre-purchase-inspection-dubai" },
+        ]}
       />
       <AboutSection 
         title={<>About <span className="text-nsauto-yellow">NS Auto</span></>}

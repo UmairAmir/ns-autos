@@ -125,6 +125,14 @@ export default function WindowTinting() {
       <ServicesOverview 
         introTitle={<>Our <span className="text-nsauto-yellow">Services</span></>}
         introText="NS Auto provides professional window tinting services in Dubai. Trusted by thousands of customers, we offer complete automotive care, including premium tint application, car body detailing, and vehicle protection solutions, ensuring comfort, privacy, and long-lasting quality."
+        services={[
+          { label: "MINOR SERVICE", link: "/car-minor-service-dubai" },
+          { label: "MAJOR SERVICE", link: "/car-major-service-dubai" },
+          { label: "PAINT PROTECTION", link: "/paint-protection-dubai" },
+          { label: "WINDOW TINTING", link: "/window-tinting-dubai" },
+          { label: "SERVICE CONTRACT", link: "/service-contract-dubai" },
+          { label: "PRE PURCHASE INSPECTION", link: "/pre-purchase-inspection-dubai" },
+        ]}
       />
       <AboutSection 
         title={<>About <span className="text-nsauto-yellow">NS Auto</span></>}
