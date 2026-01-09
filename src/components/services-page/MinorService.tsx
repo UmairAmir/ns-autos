@@ -146,37 +146,37 @@ export default function MinorService() {
           { 
             label: "Minor Service Dubai", 
             link: "/car-minor-service-dubai",
-            description: "Fast and reliable minor car servicing in Dubai. Oil, filters, and fluid top-ups completed efficiently. Keep your vehicle healthy with our budget-friendly minor services.",
+            description: "Quick oil changes and filter replacements in Dubai. Our expert mechanics inspect your vehicle thoroughly. We keep your car running smoothly with affordable minor service packages.",
             icon: <Wrench className="w-12 h-12 text-nsauto-yellow" />
           },
           { 
             label: "Major Service Dubai", 
             link: "/car-major-service-dubai",
-            description: "Comprehensive major service by Dubai's best mechanics. Deep cleaning, part replacements, and system checks included. We extend your vehicle's lifespan with quality major service.",
+            description: "Complete vehicle overhaul services across Dubai. We check all major components including brakes and suspension. Trust our certified technicians for comprehensive major service solutions.",
             icon: <Settings className="w-12 h-12 text-nsauto-yellow" />
           },
           { 
             label: "Paint Protection Dubai", 
             link: "/paint-protection-dubai",
-            description: "Advanced paint protection solutions for Dubai vehicles. Ceramic coatings resist scratches and environmental damage. Maintain your car's showroom shine with our protection packages.",
+            description: "Shield your car's paint from Dubai's harsh sun and sand. Premium ceramic coating and PPF installation available. We protect your vehicle's finish professionally.",
             icon: <Shield className="w-12 h-12 text-nsauto-yellow" />
           },
           { 
             label: "Window Tinting Dubai", 
             link: "/window-tinting-dubai",
-            description: "Expert window tinting installation throughout Dubai. Reduce heat and glare while driving comfortably. Our premium tints block harmful UV rays effectively.",
+            description: "Beat Dubai heat with professional window tinting services. UV protection keeps your interior cool and comfortable. We install high-quality tints that meet Dubai regulations.",
             icon: <Sun className="w-12 h-12 text-nsauto-yellow" />
           },
           { 
             label: "Service Contract Dubai", 
             link: "/service-contract-dubai",
-            description: "Flexible service contracts designed for Dubai drivers. Scheduled maintenance keeps unexpected breakdowns away. Invest in hassle-free car ownership with our plans.",
+            description: "Affordable maintenance plans for Dubai car owners. Regular servicing packages save you money long-term. Enjoy peace of mind with our comprehensive service contracts.",
             icon: <FileCheck className="w-12 h-12 text-nsauto-yellow" />
           },
           { 
             label: "Pre Purchase Inspection Dubai", 
             link: "/pre-purchase-inspection-dubai",
-            description: "Protect your investment with pre-purchase inspections in Dubai. We uncover hidden problems before you buy. Get honest assessments from experienced automotive inspectors.",
+            description: "Smart car buying starts with thorough inspections in Dubai. Our experts check everything before you purchase. Make confident decisions with our detailed inspection reports.",
             icon: <Search className="w-12 h-12 text-nsauto-yellow" />
           },
         ]}

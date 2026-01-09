@@ -125,25 +125,25 @@ export default function PaintProtection() {
           { 
             label: "Paint Protection Dubai", 
             link: "/paint-protection-dubai",
-            description: "Advanced paint protection solutions for Dubai vehicles. Ceramic coatings resist scratches and environmental damage. Maintain your car's showroom shine with our protection packages.",
+            description: "Premium paint protection film and coating in Dubai. Defend against chips, scratches, and fading paint. Our specialists apply protection that lasts for years.",
             icon: <Shield className="w-12 h-12 text-nsauto-yellow" />
           },
           { 
             label: "Window Tinting Dubai", 
             link: "/window-tinting-dubai",
-            description: "Expert window tinting installation throughout Dubai. Reduce heat and glare while driving comfortably. Our premium tints block harmful UV rays effectively.",
+            description: "Professional-grade window tinting services in Dubai. Stay cool while reducing fuel consumption significantly. We guarantee bubble-free installation with warranty coverage.",
             icon: <Sun className="w-12 h-12 text-nsauto-yellow" />
           },
           { 
             label: "Service Contract Dubai", 
             link: "/service-contract-dubai",
-            description: "Flexible service contracts designed for Dubai drivers. Scheduled maintenance keeps unexpected breakdowns away. Invest in hassle-free car ownership with our plans.",
+            description: "Customizable service contracts for Dubai car enthusiasts. Pre-paid maintenance packages offer excellent value. Drive worry-free knowing we've got you covered.",
             icon: <FileCheck className="w-12 h-12 text-nsauto-yellow" />
           },
           { 
             label: "Pre Purchase Inspection Dubai", 
             link: "/pre-purchase-inspection-dubai",
-            description: "Protect your investment with pre-purchase inspections in Dubai. We uncover hidden problems before you buy. Get honest assessments from experienced automotive inspectors.",
+            description: "Comprehensive used car inspections throughout Dubai. Mechanical, electrical, and body checks included. Buy used vehicles confidently with our inspection service.",
             icon: <Search className="w-12 h-12 text-nsauto-yellow" />
           },
         ]}
