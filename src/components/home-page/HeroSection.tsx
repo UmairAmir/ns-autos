@@ -33,26 +33,13 @@ const HeroSection = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setAnimated(true);
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
+    // Trigger animation shortly after mount
     const timer = setTimeout(() => {
       setAnimated(true);
       setVisible(true);
-    }, 1000);
+    }, 100);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   return (
